@@ -13,3 +13,8 @@ Individual links can be found in,
 
 
 They are also hosted in surge https://big-data-test.surge.sh
+
+Hosted using the following command:
+```
+surge --domain big-data-test.surge.sh
+```
