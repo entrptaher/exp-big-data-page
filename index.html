@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="one"></div>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const level = Number(urlParams.get('level') || 1);
+      console.log(level);
+
+      const container = document.querySelector('#one');
+      document.title = `Level ${level}`;
+      let data = '';
+
+      const limitTarget = (level >= 4) ? '10kb/' : '';
+      data += Date.now();
+      data += "<br>";
+
+      for (let i = 1; i <= 3; i++) {
+          data += `<a href="/${limitTarget}?id=${i}&level=${level + 1}&time=${Date.now()}">Level ${level + 1} - ${i}</a> `;
+      }
+      container.innerHTML = data;
+    </script>
+  </body>
+</html>
