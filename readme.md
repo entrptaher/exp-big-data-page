@@ -12,4 +12,4 @@ Individual links can be found in,
 - http://localhost:5000/10mb
 
 
-They are also hosted in surge
+They are also hosted in surge https://big-data-test.surge.sh
